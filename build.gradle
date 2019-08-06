@@ -1,0 +1,78 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.40'
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+
+    supportLibraryVersion = '1.0.0'
+    googleServiceVersion = '16.0.0'
+    okhttpVersion = '3.14.2'
+
+    minSdkVersion = 16
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+    buildToolsVersion = '26.0.2'
+    greenDaoVersion = '3.2.2'
+    debugDBVersion = '1.0.0'
+
+    dagger2Version = '2.16'
+    rx2FastAndroidNetworking = '1.0.2'
+
+    leakCanaryVersion = '1.5.1'
+
+    uCropVersion = '2.2.1'
+    inputMaskVersion = '2.3.0'
+    alerterVersion = '2.0.0'
+    toastyVersion = '1.2.5'
+    htmlTextViewVersion = '3.4'
+    licenseDialogVersion = '1.8.2'
+    aviVersion = '2.1.3'
+    frescoVersion = '1.3.0'
+    frescoImageViewerVersion = '0.5.0'
+    constraintLayoutVersion = '1.0.2'
+    bottomBarVersion = '2.3.1'
+    timberVersion = '4.7.1'
+    circleImageViewVersion = '3.0.0'
+    butterKnifeVersion = '10.1.0'
+    picassoVersion = '2.5.2'
+
+    retrofitVersion = '2.2.0'
+    converterGsonVersion = '2.2.0'
+
+    eventBusVersion = '3.0.0'
+    stethoVersion = '1.5.0'
+    rxJavaVersion = '2.0.6'
+    rxandroidVersion = '2.1.0'
+    permissionDispatcherVersion = '4.3.0'
+
+    materialSearchviewVersion = '1.4.0'
+
+    mockitoVersion = '2.7.22'
+    calligraphyVersion = '2.3.0'
+
+}

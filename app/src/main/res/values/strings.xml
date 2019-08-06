@@ -1,0 +1,152 @@
+<resources>
+    <string name="app_name">End Game</string>
+    <string name="default_error">Terjadi kesalahan</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_scan">Scan</string>
+    <string name="title_history">Histori</string>
+    <string name="title_location">Lokasi</string>
+    <string name="title_contact">Kontak</string>
+    <string name="title_user">User</string>
+    <string name="title_login_without_register">Masuk tanpa mendaftar</string>
+    <string name="title_forgot_password">Lupa Password?</string>
+    <string name="title_login">Login</string>
+    <string name="title_new_user">User baru?</string>
+    <string name="title_register_now">Daftar sekarang</string>
+    <string name="title_register">Pendaftaran</string>
+    <string name="title_verification">Verifikasi</string>
+    <string name="title_change_password">Ubah Kata Sandi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_nomor_ponsel">Nomor Ponsel</string>
+    <string name="hint_password">Kata Sandi</string>
+
+    <!--RegisterResponse Form-->
+    <string name="hint_fullname">Nama Lengkap</string>
+    <string name="hint_phone">Nomor Ponsel</string>
+    <string name="hint_nik">NIK</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_birth_date">Tanggal Lahir</string>
+    <string name="hint_gender">Jenis Kelamin</string>
+    <string name="hint_address">Alamat</string>
+    <string name="hint_province">Provinsi</string>
+    <string name="hint_city">Kota</string>
+    <string name="hint_district">Kecamatan</string>
+    <string name="hint_zip_code">Kode Pos</string>
+
+
+    <string name="hint_confirmation_password">Konfirmasi Kata Sandi</string>
+    <string name="label_required_text">* Semua baris harus diisi</string>
+    <string name="error_password_not_match">Password tidak sama.</string>
+    <string name="empty_fullname">Nama lengkap tidak boleh kosong.</string>
+    <string name="profile_menu_change_password">Ubah Kata Sandi</string>
+    <string name="profile_menu_upload_pic">Unggah Foto Diri</string>
+    <string name="profile_menu_check_point">Cek Poin</string>
+    <string name="profile_menu_help">Bantuan</string>
+    <string name="profile_menu_setting">Settings</string>
+    <string name="profile_menu_logout">Log out</string>
+    <string name="label_edit_profile">Edit Profile</string>
+    <string name="submit">Submit</string>
+    <string name="title_tab_history">Histori</string>
+    <string name="title_tab_purchase">Pembelian</string>
+    <string name="title_product_information">Informasi Produk</string>
+    <string name="label_otp_retry">Silahkan masukkan kode akses yang telah kami kirim via SMS</string>
+    <string name="label_resending_otp">Kirim ulang kode akses</string>
+    <string name="hint_old_password">Masukkan kata sandi lama</string>
+    <string name="hint_new_password">Masukkan kata sandi baru</string>
+    <string name="hint_reply_new_password">Ulangi kata sandi baru</string>
+    <string name="title_tab_help">Bantuan</string>
+    <string name="title_tab_suggestion">Saran</string>
+    <string name="label_contact_help">Ada Keluhan ? \n Hubungi call center</string>
+    <string name="title_call_center">Telepon Call Center</string>
+
+    <string-array name="gender_array">
+        <item>Jenis Kelamin</item>
+        <item>Laki - Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string name="label_fullname">Nama Lengkap</string>
+    <string name="label_email">Email</string>
+    <string name="label_address">Alamat</string>
+    <string name="label_sub_district">Kecamatan</string>
+    <string name="label_city">Kota</string>
+    <string name="label_province">Provinsi</string>
+    <string name="label_status">Status</string>
+    <string name="message_is_your_product">Produk ini milik anda?</string>
+    <string name="label_claim_now">Klaim Sekarang</string>
+    <string name="title_send_suggestion">Kirim Pesan</string>
+    <string name="label_suggestion">Punya saran dan masukan tentang pelayanan kami? Dengan senang hati kami akan
+        menerimanya.
+    </string>
+    <string name="empty_email">Email tidak boleh kosong</string>
+    <string name="empty_address">Alamat tidak boleh kosong</string>
+    <string name="empty_nik">NIK tidak boleh kosong</string>
+    <string name="empty_phone">Nomor ponsel tidak boleh kosong</string>
+    <string name="empty_password">Password tidak boleh kosong</string>
+    <string name="empty_password_conf">Konfirmasi Password tidak boleh kosong</string>
+    <string name="api_no_response">Tidak ada respon dari server</string>
+    <string name="label_finish">Selesai</string>
+    <string name="label_claim_succeed">Klaim Berhasil</string>
+    <string name="message_claim_succeed">Produk berhasil diklaim menjadi milik Anda</string>
+    <string name="info_claim_process">Masukkan 8 digit angka yang didapat dari tempat Anda melakukan pembelian produk
+        ini.
+    </string>
+    <string name="hint_input_claim_code">8 Digit Kode Toko</string>
+    <string name="title_process">Proses</string>
+    <string name="title_claim_product">Klaim Produk</string>
+    <string name="title_activity_scan_claim">Scan kode QR</string>
+    <string name="empty_otp">Kode tidak boleh kosong</string>
+    <string name="dialog_title_image">Rubah Image Profil</string>
+    <string name="toast_success_update_profile">Profil berhasil di perbarui</string>
+    <string name="empty_old_password">Kata sandi lama tidak boleh kosong</string>
+    <string name="empty_new_password">Kata sandi baru tidak boleh kosong</string>
+    <string name="empty_new_password_conf">Ulangi kata sandi baru</string>
+    <string name="toast_success_update_password">Password berhasil di perbarui</string>
+    <string name="label_take_picture">Ambil Foto</string>
+    <string name="label_take_gallery">Pilih dari galeri</string>
+    <string name="label_back">Kembali</string>
+    <string name="label_select_file">Select File</string>
+    <string name="title_toolbar_forgot_password">Lupa Password</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_toolbar_forgot_change_password">Ganti Password</string>
+    <string name="empty_suggestion_message">Deskripsi tidak boleh kosong</string>
+    <string name="toast_suggestion_send">Saran telah terkirim</string>
+    <string name="title_report_product">Laporkan Produk</string>
+    <string name="label_info_report">Isikan informasi mengenai produk yang Anda scan</string>
+    <string name="label_report_product">Laporkan Produk</string>
+    <string name="label_report_contact">Untuk respon lebih cepat, silahkan hubungi \n kami melalui:</string>
+    <string name="title_complete_user_info">Lengkapi Informasi</string>
+    <string name="title_toolbar_menu_location">Try gas stations, ATMs</string>
+
+    <string name="error_gps_disabled">GPS anda belum aktif, aktifkan GPS anda ?</string>
+    <string name="title_activate_gps">Ya</string>
+    <string name="title_no">Tidak</string>
+    <string name="error_provider">My Favourite Merchants</string>
+    <string name="title_toolbar_search_sparepart">Sparepart motor</string>
+    <string name="error_title_inactive_qr_code">QR Code sudah tidak aktif</string>
+    <string name="error_message_inactive_qr_code">Info produk ditemukan tetapi kode QR sudah tidak aktif atau produk
+        sudah kadaluwarsa
+    </string>
+    <string name="title_report">Laporkan</string>
+    <string name="error_no_data">Tidak ada data</string>
+    <string name="empty_qrcode">Qrcode tidak boleh kosong</string>
+    <string name="empty_description">Deskripsi tidak boleh kosong</string>
+    <string name="label_success_send_product_report">Pesan Terkirim</string>
+    <string name="message_product_report_success">Produk terkait sudah dilaporkan kepada pemilik brand</string>
+    <string name="title_filter">Filter</string>
+    <string name="label_sort">Urutkan</string>
+    <string name="empty_claim_store_code">8 Digit Kode Toko tidak boleh kosong</string>
+    <string name="label_vehicle_type">Tipe Kendaraan</string>
+    <string name="label_product_type">Tipe Produk</string>
+    <string name="title_save">Simpan</string>
+    <string name="hint_pick_category">Pilih kategori</string>
+    <string name="hint_pick_location">Pilih Lokasi</string>
+    <string name="hint_insert_keyword">Masukkan Kata Pencarian</string>
+    <string name="reset">Reset</string>
+    <string name="title_cancel">Batal</string>
+    <string name="error_location_permission">Izinkan untuk mendapatkan lokasi dari perangkat Anda</string>
+    <string name="success_send_suggestion">Saran</string>
+    <string name="label_yes">Ya</string>
+    <string name="label_see_product_detail">Lihat Detail Produk</string>
+</resources>

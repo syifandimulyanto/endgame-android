@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:id="@+id/date_layout"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="RtlSymmetry">
+
+            <TextView
+                    android:textColor="#34495E"
+                    style="@style/TextAppearance.Text.Regular"
+                    android:textSize="28sp"
+                    tools:text="02"
+                    android:id="@+id/date_tv"
+                    android:layout_marginTop="-8dp"
+                    android:layout_marginBottom="-8dp"
+                    android:lineSpacingExtra="-8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textColor="#34495E"
+                    style="@style/TextAppearance.Text.Medium"
+                    android:textSize="14sp"
+                    tools:text="Jun"
+                    android:id="@+id/month_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View
+                android:layout_width="1dp"
+                android:layout_height="70dp"
+                android:background="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/bg_rounded_4dp_primary_normal"
+            android:layout_width="0dp"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp">
+
+        <TextView
+                android:id="@+id/time_tv"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                tools:text="18:02 PM"
+                android:textSize="12sp"
+                style="@style/TextAppearance.Text.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/distributor_tv"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:text="PT. MPM Motor"
+                android:textStyle="bold"
+                style="@style/TextAppearance.Text.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/address_tv"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                tools:text="Jl. Simpang Dukuh No. 42.44, Genteng, Kota SBY Jawa Timur 60275 (031) 5324000"
+                android:textSize="14sp"
+                style="@style/TextAppearance.Text.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:targetApi="lollipop"/>
+
+    </LinearLayout>
+</LinearLayout>
