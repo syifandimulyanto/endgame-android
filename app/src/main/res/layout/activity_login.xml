@@ -34,11 +34,9 @@
                 android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phone_tie"
-                    android:hint="@string/hint_nomor_ponsel"
+                    android:id="@+id/email_tie"
+                    android:hint="@string/hint_email"
                     android:imeOptions="actionNext"
-                    android:inputType="phone"
-                    android:digits="0123456789"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>

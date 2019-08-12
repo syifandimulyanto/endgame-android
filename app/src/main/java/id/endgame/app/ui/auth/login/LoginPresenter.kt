@@ -17,14 +17,14 @@ constructor(
 ) :
     BasePresenter<V>(dataManager, compositeDisposable, schedulerProvider),
     LoginContract.Presenter<V> {
-    override fun procesLogin(phone: Any, password: Any) {
+    override fun procesLogin(email: Any, password: Any) {
 
         when {
-            phone.toString().isNullOrEmpty() -> mvpView?.showErrorLoginPhone(R.string.empty_phone)
+            email.toString().isNullOrEmpty() -> mvpView?.showErrorLoginPhone(R.string.empty_email)
             password.toString().isNullOrEmpty() -> mvpView?.showErrorLoginPassword(R.string.empty_password)
             else -> {
                 mvpView?.showProgress()
-                dataManager.login(phone.toString(), password.toString())
+                dataManager.login(email.toString(), password.toString())
                     .compose(schedulerProvider.ioToMainObservableScheduler())
                     .subscribe({ loginResponse ->
                         mvpView?.hideProgress()

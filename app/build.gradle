@@ -19,14 +19,14 @@ android {
     }
     buildTypes {
         debug {
-            buildConfigField("String", "BASE_URL", "\"https://staging.qtrust.id/api/customer/\"")
+            buildConfigField("String", "BASE_URL", "\"http://end.freshhomestay.com/api/\"")
             buildConfigField("String", "CLIENT_ID", "\"1\"")
             buildConfigField("String", "CLIENT_SECRET", "\"BOCwZWM70dNwILftChImfcK7DtYwKpmTYwzePN69\"")
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField("String", "BASE_URL", "\"https://staging.qtrust.id/api/customer/\"")
+            buildConfigField("String", "BASE_URL", "\"http://end.freshhomestay.com/api/\"")
             buildConfigField("String", "CLIENT_ID", "\"1\"")
             buildConfigField("String", "CLIENT_SECRET", "\"BOCwZWM70dNwILftChImfcK7DtYwKpmTYwzePN69\"")
         }

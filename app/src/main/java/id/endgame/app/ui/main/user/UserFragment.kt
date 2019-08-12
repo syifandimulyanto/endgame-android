@@ -71,7 +71,7 @@ class UserFragment : BaseFragment(), UserContract.View {
     }
 
     override fun displayProfile(user: User?) {
-        profile_name_tv.text=user?.fullName
+        profile_name_tv.text=user?.firstName
         //if (!user?.pic.isNullOrEmpty()) Glide.with(this).load(user?.pic).into(pic_civ)
     }
 

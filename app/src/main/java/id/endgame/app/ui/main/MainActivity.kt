@@ -9,6 +9,7 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import id.endgame.app.R
 import id.endgame.app.ui.base.BaseActivity
+import id.endgame.app.ui.main.home.HomeFragment
 import id.endgame.app.ui.main.user.UserFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -30,14 +31,14 @@ class MainActivity : BaseActivity(), HasSupportFragmentInjector,
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         nav_view.setOnNavigationItemSelectedListener(this)
-        replaceFragment(UserFragment.newInstance())
+        replaceFragment(HomeFragment.newInstance())
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         var fragment: Fragment? = null
         when (item.itemId) {
             R.id.navigation_scan -> {
-                //fragment = ScanCodeFragment.newInstance()
+                fragment = HomeFragment.newInstance()
             }
             R.id.navigation_history -> {
                 //fragment = MainHistoryFragment.newInstance()

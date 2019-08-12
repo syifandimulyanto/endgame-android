@@ -29,16 +29,16 @@ class LoginActivity : BaseActivity(), LoginContract.View {
 
     private fun setupListener() {
         login_btn.setOnClickListener{
-            presenter.procesLogin(phone_tie.text.toString(), password_tie.text.toString())
+            presenter.procesLogin(email_tie.text.toString(), password_tie.text.toString())
         }
 
-        phone_tie.addTextChangedListener(object: TextWatcher{
+        email_tie.addTextChangedListener(object: TextWatcher{
             override fun afterTextChanged(p0: Editable?) {}
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                if (!s.isNullOrEmpty() && s.length >= 8) {
+                if (!s.isNullOrEmpty()) {
                     phone_til.error=null
                 }
             }
@@ -50,7 +50,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                if (!s.isNullOrEmpty() && s.length >= 3) {
+                if (!s.isNullOrEmpty()) {
                     password_til.error=null
                 }
             }

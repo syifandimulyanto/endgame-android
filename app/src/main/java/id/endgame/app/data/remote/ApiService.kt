@@ -1,13 +1,19 @@
 package id.endgame.app.data.remote
 
 import id.endgame.app.data.entity.UserResponse
+import id.endgame.app.data.entity.model.Slider
 import io.reactivex.Observable
 
 
 interface ApiService {
 
     fun login(
-        phone: String,
+        email: String,
         password: String
     ): Observable<UserResponse>
+
+
+    fun slider(): Observable<List<Slider>>
+
+
 }

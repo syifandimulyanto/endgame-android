@@ -2,6 +2,7 @@ package id.endgame.app.data
 
 import android.content.Context
 import id.endgame.app.data.entity.*
+import id.endgame.app.data.entity.model.Slider
 import id.endgame.app.data.entity.model.User
 import id.endgame.app.data.local.prefs.PreferenceHelper
 import id.endgame.app.data.remote.ApiServiceHelper
@@ -40,9 +41,11 @@ constructor(
         preferenceHelper.setAccessToken(accessToken)
     }
 
-    override fun login(phone: String, password: String): Observable<UserResponse> {
-        return apiService.login(phone, password)
+    override fun login(email: String, password: String): Observable<UserResponse> {
+        return apiService.login(email, password)
     }
+
+    override fun slider(): Observable<List<Slider>> = apiService.slider()
 
     override fun setCurrentUserModel(userModel: User?) {
         return preferenceHelper.setCurrentUserModel(userModel)
