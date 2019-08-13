@@ -152,4 +152,6 @@
     <string name="title_home">Beranda</string>
     <string name="title_reminder">Pemberitahuan</string>
     <string name="title_notification">Kotak Surat</string>
+    <string name="title_schedule">Jadwal</string>
+    <string name="title_schedule_change">Perubahan Jadwal</string>
 </resources>

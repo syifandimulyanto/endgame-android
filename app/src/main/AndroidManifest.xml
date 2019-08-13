@@ -39,6 +39,9 @@
                 android:screenOrientation="portrait"
                 android:theme="@style/AppThemeFullScreen">
         </activity>
+        <activity android:name=".ui.main.schedule.ScheduleActivity"/>
+        <activity android:name=".ui.main.scheduleChange.ScheduleChangeActivity"/>
+
         <activity
                 android:name="id.endgame.app.ui.auth.login.LoginActivity"
                 android:screenOrientation="portrait"

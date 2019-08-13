@@ -1,5 +1,7 @@
 package id.endgame.app.data.remote
 
+import id.endgame.app.data.entity.ScheduleChangeResponse
+import id.endgame.app.data.entity.ScheduleResponse
 import id.endgame.app.data.entity.UserResponse
 import id.endgame.app.data.entity.model.Notification
 import id.endgame.app.data.entity.model.Slider
@@ -16,5 +18,9 @@ interface ApiService {
     fun slider(): Observable<List<Slider>>
 
     fun notification(): Observable<List<Notification>>
+
+    fun schedule(): Observable<List<ScheduleResponse>>
+
+    fun scheduleChange(): Observable<List<ScheduleChangeResponse>>
 
 }

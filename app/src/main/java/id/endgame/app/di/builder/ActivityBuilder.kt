@@ -9,6 +9,10 @@ import id.endgame.app.ui.main.MainActivity
 import id.endgame.app.ui.main.MainActivityModule
 import id.endgame.app.ui.main.home.HomeFragmentProvider
 import id.endgame.app.ui.main.notification.NotificationFragmentProvider
+import id.endgame.app.ui.main.schedule.ScheduleActivity
+import id.endgame.app.ui.main.schedule.ScheduleActivityModule
+import id.endgame.app.ui.main.scheduleChange.ScheduleChangeActivity
+import id.endgame.app.ui.main.scheduleChange.ScheduleChangeActivityModule
 import id.endgame.app.ui.main.user.UserFragmentProvider
 import id.endgame.app.ui.splash.SplashActivity
 import id.endgame.app.ui.splash.SplashActivityModule
@@ -31,5 +35,11 @@ abstract class ActivityBuilder {
         ]
     )
     internal abstract fun bindMainActivity(): MainActivity
+
+    @ContributesAndroidInjector(modules = [ScheduleActivityModule::class])
+    internal abstract fun bindScheduleActivity(): ScheduleActivity
+
+    @ContributesAndroidInjector(modules = [ScheduleChangeActivityModule::class])
+    internal abstract fun bindScheduleChangeActivity(): ScheduleChangeActivity
 
 }

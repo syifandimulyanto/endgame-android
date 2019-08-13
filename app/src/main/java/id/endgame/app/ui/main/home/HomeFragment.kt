@@ -1,5 +1,6 @@
 package id.endgame.app.ui.main.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,8 @@ import id.endgame.app.data.entity.model.Reminder
 import id.endgame.app.data.entity.model.Slider
 import kotlinx.android.synthetic.main.fragment_home.*
 import id.endgame.app.utils.GridItemOffsetDecoration
+import id.endgame.app.ui.main.schedule.ScheduleActivity
+import id.endgame.app.ui.main.scheduleChange.ScheduleChangeActivity
 
 /**
  * Created by syifandimulyanto.id on 2019-08-08
@@ -51,7 +54,7 @@ class HomeFragment : BaseFragment(), HomeContract.View {
         setupMenuAdapter()
         val menus = listOf(
             Menu(slug = "schedule", title = "Jadwal", url = ""),
-            Menu(slug = "change", title = "Perubahan Jadwal", url = "")
+            Menu(slug = "schedule-change", title = "Perubahan Jadwal", url = "")
         )
         homeMenuAdapter.setItems(menus)
 
@@ -94,7 +97,7 @@ class HomeFragment : BaseFragment(), HomeContract.View {
         homeMenuAdapter.callback = object : HomeMenuAdapter.ItemAdapterCallback {
             override fun onItemClicked(data: Menu) {
                 data?.let {
-                    openMenu()
+                    openMenu(data)
                 }
             }
         }
@@ -108,15 +111,24 @@ class HomeFragment : BaseFragment(), HomeContract.View {
         homeReminderAdapter.callback = object : HomeReminderAdapter.ItemAdapterCallback {
             override fun onItemClicked(data: Reminder) {
                 data?.let {
-                    openMenu()
+                    //openMenu()
                 }
             }
         }
         ViewCompat.setNestedScrollingEnabled(rv_reminder_list, false)
     }
 
+    private fun openMenu(data: Menu) {
 
-    private fun openMenu() {
-
+        when (data.slug) {
+            "schedule" -> {
+                var intent = Intent(context, ScheduleActivity::class.java)
+                startActivity(intent)
+            }
+            "schedule-change" -> {
+                var intent = Intent(context, ScheduleChangeActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 }

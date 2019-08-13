@@ -50,6 +50,10 @@ constructor(
 
     override fun notification(): Observable<List<Notification>> = apiService.notification()
 
+    override fun schedule(): Observable<List<ScheduleResponse>> = apiService.schedule()
+
+    override fun scheduleChange(): Observable<List<ScheduleChangeResponse>> = apiService.scheduleChange()
+
     override fun setCurrentUserModel(userModel: User?) {
         return preferenceHelper.setCurrentUserModel(userModel)
     }
