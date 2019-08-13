@@ -149,4 +149,7 @@
     <string name="success_send_suggestion">Saran</string>
     <string name="label_yes">Ya</string>
     <string name="label_see_product_detail">Lihat Detail Produk</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_reminder">Pemberitahuan</string>
+    <string name="title_notification">Kotak Surat</string>
 </resources>

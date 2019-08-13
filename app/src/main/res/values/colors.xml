@@ -42,4 +42,35 @@
     <color name="scan_not_valid">#FDB813</color>
     <color name="scan_success">#66C954</color>
     <color name="scan_failed">#FC8866</color>
+
+
+    <!--Colors from zeplin-->
+    <color name="medium_green">#39b54d</color>
+    <color name="tree_green">#1a892e</color>
+    <color name="charcoal_grey_two">#39434e</color>
+    <color name="charcoal_grey">#303135</color>
+    <color name="battleship_grey">#697586</color>
+    <color name="battleship_grey_058">#93697586</color>
+    <color name="pine">#263a26</color>
+    <color name="coral">#fa5252</color>
+    <color name="vermillion">#dc1818</color>
+    <color name="golden_yellow">#ffcf1f</color>
+    <color name="very_light_pink">#fff2f2</color>
+    <color name="off_white">#fff8de</color>
+    <color name="bright_blue">#0566ff</color>
+    <color name="blue">#0456d9</color>
+    <color name="ice_blue">#f2f9ff</color>
+    <color name="pale_grey">#f6f8fa</color>
+    <color name="pale_grey_two">#f3f4f6</color>
+    <color name="pale_grey_three">#dfe4e8</color>
+    <color name="piss_yellow">#e6ba1c</color>
+    <color name="cloudy_blue">#bfc9d8</color>
+    <color name="divider">#f3f5f7</color>
+    <color name="grey_border">#eceff1</color>
+    <color name="medium_green_transparent">#2839b54d</color>
+    <color name="green_seekbar">#00cf50</color>
+    <color name="red_orange">#ff5811</color>
+    <color name="dark_navy">#202234</color>
+    <color name="pale_red">#feefe9</color>
+
 </resources>

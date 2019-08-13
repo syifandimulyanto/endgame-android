@@ -8,6 +8,7 @@ import id.endgame.app.ui.auth.login.LoginActivityModule
 import id.endgame.app.ui.main.MainActivity
 import id.endgame.app.ui.main.MainActivityModule
 import id.endgame.app.ui.main.home.HomeFragmentProvider
+import id.endgame.app.ui.main.notification.NotificationFragmentProvider
 import id.endgame.app.ui.main.user.UserFragmentProvider
 import id.endgame.app.ui.splash.SplashActivity
 import id.endgame.app.ui.splash.SplashActivityModule
@@ -25,7 +26,8 @@ abstract class ActivityBuilder {
         modules = [
             MainActivityModule::class,
             UserFragmentProvider::class,
-            HomeFragmentProvider::class
+            HomeFragmentProvider::class,
+            NotificationFragmentProvider::class
         ]
     )
     internal abstract fun bindMainActivity(): MainActivity

@@ -2,6 +2,7 @@ package id.endgame.app.data
 
 import android.content.Context
 import id.endgame.app.data.entity.*
+import id.endgame.app.data.entity.model.Notification
 import id.endgame.app.data.entity.model.Slider
 import id.endgame.app.data.entity.model.User
 import id.endgame.app.data.local.prefs.PreferenceHelper
@@ -46,6 +47,8 @@ constructor(
     }
 
     override fun slider(): Observable<List<Slider>> = apiService.slider()
+
+    override fun notification(): Observable<List<Notification>> = apiService.notification()
 
     override fun setCurrentUserModel(userModel: User?) {
         return preferenceHelper.setCurrentUserModel(userModel)

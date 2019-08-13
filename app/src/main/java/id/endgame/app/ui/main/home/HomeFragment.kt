@@ -4,11 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.ViewCompat
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import id.endgame.app.ui.base.BaseFragment
 import javax.inject.Inject
 import id.endgame.app.R
+import id.endgame.app.data.entity.model.Menu
+import id.endgame.app.data.entity.model.Reminder
 import id.endgame.app.data.entity.model.Slider
 import kotlinx.android.synthetic.main.fragment_home.*
+import id.endgame.app.utils.GridItemOffsetDecoration
 
 /**
  * Created by syifandimulyanto.id on 2019-08-08
@@ -19,6 +26,8 @@ class HomeFragment : BaseFragment(), HomeContract.View {
     lateinit var presenter: HomeContract.Presenter<HomeContract.View>
 
     private lateinit var sliderAdapter: SliderAdapter
+    private val homeMenuAdapter = HomeMenuAdapter()
+    private val homeReminderAdapter = HomeReminderAdapter()
 
     companion object {
         @JvmStatic
@@ -39,6 +48,17 @@ class HomeFragment : BaseFragment(), HomeContract.View {
     }
 
     override fun setUp() {
+        setupMenuAdapter()
+        val menus = listOf(
+            Menu(slug = "schedule", title = "Jadwal", url = ""),
+            Menu(slug = "change", title = "Perubahan Jadwal", url = "")
+        )
+        homeMenuAdapter.setItems(menus)
+
+        // reminder
+        setupReminderAdapter()
+        val reminders = listOf(Reminder(title = "Notif"), Reminder(title = "Data masuk"))
+        homeReminderAdapter.setItems(reminders)
     }
 
     override fun onCreateView(
@@ -63,5 +83,40 @@ class HomeFragment : BaseFragment(), HomeContract.View {
             setPadding(60, 0, 60, 0)
             pageMargin = 20
         }
+    }
+
+    private fun setupMenuAdapter() {
+        val spaceItem = resources.getDimensionPixelSize(R.dimen.standard_small_margin)
+        rv_list.addItemDecoration(GridItemOffsetDecoration(spaceItem))
+        val layoutManager = GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
+        rv_list.layoutManager = layoutManager
+        rv_list.adapter = homeMenuAdapter
+        homeMenuAdapter.callback = object : HomeMenuAdapter.ItemAdapterCallback {
+            override fun onItemClicked(data: Menu) {
+                data?.let {
+                    openMenu()
+                }
+            }
+        }
+        ViewCompat.setNestedScrollingEnabled(rv_list, false)
+    }
+
+    private fun setupReminderAdapter() {
+        rv_reminder_list.layoutManager = LinearLayoutManager(context)
+        rv_reminder_list.hasFixedSize()
+        rv_reminder_list.adapter = homeReminderAdapter
+        homeReminderAdapter.callback = object : HomeReminderAdapter.ItemAdapterCallback {
+            override fun onItemClicked(data: Reminder) {
+                data?.let {
+                    openMenu()
+                }
+            }
+        }
+        ViewCompat.setNestedScrollingEnabled(rv_reminder_list, false)
+    }
+
+
+    private fun openMenu() {
+
     }
 }

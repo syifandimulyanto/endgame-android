@@ -1,6 +1,7 @@
 package id.endgame.app.data.remote
 
 import id.endgame.app.data.entity.UserResponse
+import id.endgame.app.data.entity.model.Notification
 import id.endgame.app.data.entity.model.Slider
 import io.reactivex.Observable
 import retrofit2.http.*
@@ -18,5 +19,8 @@ interface ApiServiceHelper {
 
     @GET("slider")
     fun slider(): Observable<List<Slider>>
+
+    @GET("notification")
+    fun notification(): Observable<List<Notification>>
 
 }
