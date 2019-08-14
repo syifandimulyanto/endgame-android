@@ -54,6 +54,8 @@ constructor(
 
     override fun scheduleChange(): Observable<List<ScheduleChangeResponse>> = apiService.scheduleChange()
 
+    override fun attend(): Observable<List<AttendResponse>> = apiService.attend()
+
     override fun setCurrentUserModel(userModel: User?) {
         return preferenceHelper.setCurrentUserModel(userModel)
     }

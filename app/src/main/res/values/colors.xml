@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#34495E</color>
+    <!--Core colour-->
+    <color name="colorPrimary">#5272e3</color>
+    <color name="colorPrimaryPane">#38c3d0</color>
+
+    <color name="colorSecond">#959595</color>
+    <color name="colorSecondPane">#b1eff6</color>
+    <color name="colorSecondThird">#f6fcf8</color>
+
+
     <color name="colorPrimaryDark">@color/black</color>
     <color name="colorAccent">#34495E</color>
     <color name="light_gray">#dbdbdb</color>

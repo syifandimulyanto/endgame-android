@@ -9,7 +9,7 @@
     <item
             android:id="@+id/navigation_reminder"
             android:icon="@drawable/ic_bell"
-            android:title="@string/title_reminder"/>
+            android:title="@string/title_attende"/>
 
     <item
             android:id="@+id/navigation_notification"

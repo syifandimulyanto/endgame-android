@@ -9,6 +9,7 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import id.endgame.app.R
 import id.endgame.app.ui.base.BaseActivity
+import id.endgame.app.ui.main.attend.AttendFragment
 import id.endgame.app.ui.main.home.HomeFragment
 import id.endgame.app.ui.main.notification.NotificationFragment
 import id.endgame.app.ui.main.user.UserFragment
@@ -42,7 +43,7 @@ class MainActivity : BaseActivity(), HasSupportFragmentInjector,
                 fragment = HomeFragment.newInstance()
             }
             R.id.navigation_reminder -> {
-                //fragment = MainHistoryFragment.newInstance()
+                fragment = AttendFragment.newInstance()
             }
             R.id.navigation_notification -> {
                 fragment = NotificationFragment.newInstance()

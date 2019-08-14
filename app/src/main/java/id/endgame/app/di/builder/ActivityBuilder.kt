@@ -7,6 +7,7 @@ import id.endgame.app.ui.auth.login.LoginActivity
 import id.endgame.app.ui.auth.login.LoginActivityModule
 import id.endgame.app.ui.main.MainActivity
 import id.endgame.app.ui.main.MainActivityModule
+import id.endgame.app.ui.main.attend.AttendFragmentProvider
 import id.endgame.app.ui.main.home.HomeFragmentProvider
 import id.endgame.app.ui.main.notification.NotificationFragmentProvider
 import id.endgame.app.ui.main.schedule.ScheduleActivity
@@ -29,9 +30,10 @@ abstract class ActivityBuilder {
     @ContributesAndroidInjector(
         modules = [
             MainActivityModule::class,
-            UserFragmentProvider::class,
             HomeFragmentProvider::class,
-            NotificationFragmentProvider::class
+            AttendFragmentProvider::class,
+            NotificationFragmentProvider::class,
+            UserFragmentProvider::class
         ]
     )
     internal abstract fun bindMainActivity(): MainActivity

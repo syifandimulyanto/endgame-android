@@ -3,14 +3,14 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:background="#f0f4f7"
+        android:background="@color/colorSecondThird"
         android:overScrollMode="never"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     <LinearLayout
             android:focusableInTouchMode="true"
-            android:background="#f0f4f7"
+            android:background="@color/colorSecondThird"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

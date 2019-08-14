@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import id.endgame.app.R
 import id.endgame.app.data.entity.model.Notification
 import kotlinx.android.synthetic.main.item_notification.view.*
@@ -44,9 +45,20 @@ class NotificationAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val nameTv = view.tv_reminder
+        private val titleTv = view.title_tv
+        private val descriptionTv = view.description_tv
+        private val imageIv = view.image_iv
+
         fun bindData(data: Notification, position: Int) {
-            nameTv.text = data.title
+            titleTv.text = data.title
+            descriptionTv.text = data.description
+
+            Glide.with(itemView.context)
+                .load(R.drawable.dog)
+                .error(R.drawable.dog)
+                .placeholder(R.drawable.dog)
+                .dontAnimate()
+                .into(imageIv)
 
             itemView.setOnClickListener {
                 callback?.onItemClicked(data)

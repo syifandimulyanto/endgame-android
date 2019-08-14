@@ -1,5 +1,6 @@
 package id.endgame.app.data.remote
 
+import id.endgame.app.data.entity.AttendResponse
 import id.endgame.app.data.entity.ScheduleChangeResponse
 import id.endgame.app.data.entity.ScheduleResponse
 import id.endgame.app.data.entity.UserResponse
@@ -22,5 +23,7 @@ interface ApiService {
     fun schedule(): Observable<List<ScheduleResponse>>
 
     fun scheduleChange(): Observable<List<ScheduleChangeResponse>>
+
+    fun attend(): Observable<List<AttendResponse>>
 
 }
