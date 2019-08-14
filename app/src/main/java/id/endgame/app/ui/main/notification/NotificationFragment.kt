@@ -1,5 +1,6 @@
 package id.endgame.app.ui.main.notification
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import id.endgame.app.ui.base.BaseFragment
 import javax.inject.Inject
 import id.endgame.app.R
+import id.endgame.app.ui.main.notification.detail.NotificationDetailActivity
 import id.endgame.app.data.entity.model.Notification
 import id.endgame.app.data.entity.model.Reminder
 import kotlinx.android.synthetic.main.fragment_notification.*
@@ -33,8 +35,6 @@ class NotificationFragment : BaseFragment(), NotificationContract.View {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         presenter.onAttach(this)
         super.onViewCreated(view, savedInstanceState)
-
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_notification)
     }
 
     override fun onDestroyView() {
@@ -65,13 +65,15 @@ class NotificationFragment : BaseFragment(), NotificationContract.View {
         notificationAdapter.callback = object : NotificationAdapter.ItemAdapterCallback {
             override fun onItemClicked(data: Notification) {
                 data?.let {
-                    openDetail()
+                    openDetail(data)
                 }
             }
         }
     }
 
-    private fun openDetail() {
-
+    private fun openDetail(data: Notification) {
+        val intent = Intent(context, NotificationDetailActivity::class.java)
+        intent.putExtra("data", data)
+        startActivity(intent)
     }
 }

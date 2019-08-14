@@ -10,6 +10,8 @@ import id.endgame.app.ui.main.MainActivityModule
 import id.endgame.app.ui.main.attend.AttendFragmentProvider
 import id.endgame.app.ui.main.home.HomeFragmentProvider
 import id.endgame.app.ui.main.notification.NotificationFragmentProvider
+import id.endgame.app.ui.main.notification.detail.NotificationDetailActivity
+import id.endgame.app.ui.main.notification.detail.NotificationDetailActivityModule
 import id.endgame.app.ui.main.schedule.ScheduleActivity
 import id.endgame.app.ui.main.schedule.ScheduleActivityModule
 import id.endgame.app.ui.main.scheduleChange.ScheduleChangeActivity
@@ -43,5 +45,8 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector(modules = [ScheduleChangeActivityModule::class])
     internal abstract fun bindScheduleChangeActivity(): ScheduleChangeActivity
+
+    @ContributesAndroidInjector(modules = [NotificationDetailActivityModule::class])
+    internal abstract fun bindNotificationDetailActivity(): NotificationDetailActivity
 
 }

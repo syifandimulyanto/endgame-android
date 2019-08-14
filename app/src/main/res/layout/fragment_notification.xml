@@ -9,9 +9,9 @@
             android:id="@+id/toolbar"
             app:titleTextColor="@color/white"
             android:background="@color/colorPrimary"
+            app:title="@string/title_notification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_list"
