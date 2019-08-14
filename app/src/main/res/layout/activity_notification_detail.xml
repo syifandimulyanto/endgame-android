@@ -31,7 +31,14 @@
                         android:textColor="@color/charcoal_grey_two"
                         android:maxLines="2"
                         android:ellipsize="end"
+                        tools:text="Title"
                 />
+
+                <ImageView
+                        android:id="@+id/image_iv"
+                        tools:src="@drawable/dog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"/>
 
                 <TextView
                         android:layout_marginTop="8dp"
@@ -40,6 +47,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
                         android:textColor="@color/battleship_grey"
+                        tools:text="Description"
                 />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

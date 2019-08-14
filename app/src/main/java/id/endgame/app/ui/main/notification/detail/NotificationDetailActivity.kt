@@ -2,6 +2,9 @@ package id.endgame.app.ui.main.notification.detail
 
 import android.os.Bundle
 import android.view.MenuItem
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.target.Target
 import id.endgame.app.R
 import id.endgame.app.data.entity.model.Notification
 import id.endgame.app.ui.base.BaseActivity
@@ -39,6 +42,25 @@ class NotificationDetailActivity : BaseActivity(), NotificationDetailContract.Vi
         val data = intent.getSerializableExtra("data") as Notification
         tv_title.text = data.title
         tv_description.text = data.description
+
+
+        if (data.url != null && !data.url.isEmpty()) {
+            Glide.with(this)
+                .load("${data.url}")
+                .error(R.drawable.dog)
+                .placeholder(R.drawable.dog)
+                .transform(RoundedCorners(35))
+                .override(Target.SIZE_ORIGINAL)
+                .into(image_iv)
+        }else{
+            Glide.with(this)
+                .load(R.drawable.dog)
+                .error(R.drawable.dog)
+                .placeholder(R.drawable.dog)
+                .transform(RoundedCorners(35))
+                .override(Target.SIZE_ORIGINAL)
+                .into(image_iv)
+        }
 
         supportActionBar?.apply {
             title=data.title

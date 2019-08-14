@@ -53,12 +53,21 @@ class NotificationAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             titleTv.text = data.title
             descriptionTv.text = data.description
 
-            Glide.with(itemView.context)
-                .load(R.drawable.dog)
-                .error(R.drawable.dog)
-                .placeholder(R.drawable.dog)
-                .dontAnimate()
-                .into(imageIv)
+            if (data.url != null && !data.url.isEmpty()) {
+                Glide.with(itemView.context)
+                    .load("${data.url}")
+                    .error(R.drawable.dog)
+                    .placeholder(R.drawable.dog)
+                    .dontAnimate()
+                    .into(imageIv)
+            }else{
+                Glide.with(itemView.context)
+                    .load(R.drawable.dog)
+                    .error(R.drawable.dog)
+                    .placeholder(R.drawable.dog)
+                    .dontAnimate()
+                    .into(imageIv)
+            }
 
             itemView.setOnClickListener {
                 callback?.onItemClicked(data)

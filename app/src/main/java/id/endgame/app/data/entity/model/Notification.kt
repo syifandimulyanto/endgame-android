@@ -35,4 +35,8 @@ class Notification : Serializable {
     @Expose
     @SerializedName("created_at")
     val createdAt: String? = null
+
+    @Expose
+    @SerializedName("url")
+    val url: String? = null
 }
