@@ -10,6 +10,7 @@ import id.endgame.app.utils.AppConstants
 import id.endgame.app.R
 import id.endgame.app.data.local.prefs.PreferenceHelper
 import id.endgame.app.ui.auth.login.LoginActivity
+import id.endgame.app.ui.main.user.password.UserPasswordActivity
 
 /**
  * Created by syifandimulyanto.id on 2019-06-25
@@ -39,12 +40,8 @@ class ProfileMenuAdapter(val menuList: List<ProfileMenuItem>): RecyclerView.Adap
             itemView.setOnClickListener {
                 when(profileMenuItem.action){
                     AppConstants.MenuChangePassword -> {
-                        //val intent = Intent(view.context, UserChangePasswordActivity::class.java)
-                        //view.context.startActivity(intent)
-                    }
-                    AppConstants.MenuUploadPic -> {
-                        //val intent = Intent(view.context, UserIdentityImageActivity::class.java)
-                        //view.context.startActivity(intent)
+                        val intent = Intent(view.context, UserPasswordActivity::class.java)
+                        view.context.startActivity(intent)
                     }
                     AppConstants.MenuLogout -> {
                         menuCallback?.logout()

@@ -8,12 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide
 
 import id.endgame.app.R
 import id.endgame.app.data.entity.model.User
 import id.endgame.app.ui.base.BaseFragment
 import id.endgame.app.ui.auth.login.LoginActivity
+import id.endgame.app.ui.main.user.update.UserUpdateActivity
 import kotlinx.android.synthetic.main.fragment_user.*
 import javax.inject.Inject
 
@@ -89,7 +89,7 @@ class UserFragment : BaseFragment(), UserContract.View {
     }
 
     private fun openUserUpdateActivity(){
-        //val intent = Intent(getBaseActivity(), UserUpdateActivity::class.java)
-        //startActivity(intent)
+        val intent = Intent(getBaseActivity(), UserUpdateActivity::class.java)
+        startActivity(intent)
     }
 }

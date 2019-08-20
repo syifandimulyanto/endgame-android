@@ -17,6 +17,10 @@ import id.endgame.app.ui.main.schedule.ScheduleActivityModule
 import id.endgame.app.ui.main.scheduleChange.ScheduleChangeActivity
 import id.endgame.app.ui.main.scheduleChange.ScheduleChangeActivityModule
 import id.endgame.app.ui.main.user.UserFragmentProvider
+import id.endgame.app.ui.main.user.password.UserPasswordActivity
+import id.endgame.app.ui.main.user.password.UserPasswordActivityModule
+import id.endgame.app.ui.main.user.update.UserUpdateActivity
+import id.endgame.app.ui.main.user.update.UserUpdateActivityModule
 import id.endgame.app.ui.splash.SplashActivity
 import id.endgame.app.ui.splash.SplashActivityModule
 
@@ -39,6 +43,12 @@ abstract class ActivityBuilder {
         ]
     )
     internal abstract fun bindMainActivity(): MainActivity
+
+    @ContributesAndroidInjector(modules = [UserUpdateActivityModule::class])
+    internal abstract fun bindUserUpdateActivity(): UserUpdateActivity
+
+    @ContributesAndroidInjector(modules = [UserPasswordActivityModule::class])
+    internal abstract fun bindUserPasswordActivity(): UserPasswordActivity
 
     @ContributesAndroidInjector(modules = [ScheduleActivityModule::class])
     internal abstract fun bindScheduleActivity(): ScheduleActivity

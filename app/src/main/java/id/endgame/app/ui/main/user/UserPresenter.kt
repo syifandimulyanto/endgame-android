@@ -38,14 +38,6 @@ constructor(
                 AppConstants.MenuChangePassword
             ),
             ProfileMenuItem(
-                R.string.profile_menu_upload_pic,
-                AppConstants.MenuUploadPic
-            ),
-            ProfileMenuItem(
-                R.string.profile_menu_check_point,
-                AppConstants.MenuCheckPoint
-            ),
-            ProfileMenuItem(
                 R.string.profile_menu_help,
                 AppConstants.MenuHelp
             ),

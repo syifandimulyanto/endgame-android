@@ -155,4 +155,10 @@
     <string name="title_schedule">Jadwal</string>
     <string name="title_schedule_change">Perubahan Jadwal</string>
     <string name="title_attende">Kehadiran</string>
+    <string name="title_user_update">Edit Profile</string>
+    <string name="title_user_update_password">Ganti Password</string>
+    <string name="title_submit_change_password">Ubah Password</string>
+    <string name="hint_nrp">NRP</string>
+    <string name="hint_birth_place">Tempat Lahir</string>
+    <string name="title_submit_change_user">Ubah Profile</string>
 </resources>

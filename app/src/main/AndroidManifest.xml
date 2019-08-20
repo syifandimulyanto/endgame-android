@@ -42,6 +42,8 @@
         <activity android:name=".ui.main.schedule.ScheduleActivity"/>
         <activity android:name=".ui.main.scheduleChange.ScheduleChangeActivity"/>
         <activity android:name=".ui.main.notification.detail.NotificationDetailActivity"/>
+        <activity android:name=".ui.main.user.update.UserUpdateActivity"/>
+        <activity android:name=".ui.main.user.password.UserPasswordActivity"/>
 
         <activity
                 android:name="id.endgame.app.ui.auth.login.LoginActivity"
